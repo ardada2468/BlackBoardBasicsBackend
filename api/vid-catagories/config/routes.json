@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/vid-catagories",
+      "handler": "vid-catagories.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/vid-catagories/count",
+      "handler": "vid-catagories.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/vid-catagories/:id",
+      "handler": "vid-catagories.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/vid-catagories",
+      "handler": "vid-catagories.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/vid-catagories/:id",
+      "handler": "vid-catagories.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/vid-catagories/:id",
+      "handler": "vid-catagories.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

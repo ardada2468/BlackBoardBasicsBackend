@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "writers",
+  "info": {
+    "name": "Writer",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "picture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "articles": {
+      "collection": "article",
+      "via": "writer"
+    },
+    "videos": {
+      "collection": "video",
+      "via": "writer"
+    }
+  }
+}

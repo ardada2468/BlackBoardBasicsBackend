@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vid_catagories",
+  "info": {
+    "name": "VidCatagories",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Name",
+      "required": true
+    },
+    "videos": {
+      "collection": "video",
+      "via": "vid_catagory"
+    }
+  }
+}

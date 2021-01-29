@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "a_place_tos",
+  "info": {
+    "name": "APlaceTo"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Purpose": {
+      "type": "string"
+    }
+  }
+}

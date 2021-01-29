@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "board_memebers",
+  "info": {
+    "name": "BoardMemeber"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "email",
+      "required": true
+    },
+    "Picture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "role": {
+      "type": "string",
+      "required": true
+    },
+    "ShortBio": {
+      "type": "text",
+      "maxLength": 297
+    }
+  }
+}

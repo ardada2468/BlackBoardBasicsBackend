@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "editors",
+  "info": {
+    "name": "Editor",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "Email": {
+      "type": "email",
+      "unique": false,
+      "required": true
+    },
+    "articles": {
+      "collection": "article",
+      "via": "editor"
+    },
+    "videos": {
+      "collection": "video",
+      "via": "editor"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "graphics_designers",
+  "info": {
+    "name": "Graphics Designer",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Email": {
+      "type": "email",
+      "required": true
+    },
+    "Photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "articles": {
+      "collection": "article",
+      "via": "graphics_designer"
+    },
+    "videos": {
+      "collection": "video",
+      "via": "graphics_designer"
+    }
+  }
+}

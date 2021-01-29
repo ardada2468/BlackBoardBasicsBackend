@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/board-memebers",
+      "handler": "board-memeber.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/board-memebers/count",
+      "handler": "board-memeber.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/board-memebers/:id",
+      "handler": "board-memeber.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/board-memebers",
+      "handler": "board-memeber.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/board-memebers/:id",
+      "handler": "board-memeber.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/board-memebers/:id",
+      "handler": "board-memeber.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

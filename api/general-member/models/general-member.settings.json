@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "general_members",
+  "info": {
+    "name": "GeneralMember"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "unique": false,
+      "required": true
+    },
+    "Email": {
+      "type": "email",
+      "required": true
+    },
+    "ShortBio": {
+      "type": "richtext",
+      "required": true,
+      "maxLength": 300
+    },
+    "role": {
+      "type": "string",
+      "required": true
+    },
+    "Picture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}

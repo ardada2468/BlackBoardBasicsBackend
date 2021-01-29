@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/graphics-designers",
+      "handler": "graphics-designer.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/graphics-designers/count",
+      "handler": "graphics-designer.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/graphics-designers/:id",
+      "handler": "graphics-designer.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/graphics-designers",
+      "handler": "graphics-designer.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/graphics-designers/:id",
+      "handler": "graphics-designer.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/graphics-designers/:id",
+      "handler": "graphics-designer.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

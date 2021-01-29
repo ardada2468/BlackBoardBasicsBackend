@@ -1,0 +1,76 @@
+{
+  "kind": "collectionType",
+  "collectionName": "videos",
+  "info": {
+    "name": "Video"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Title"
+    },
+    "VideoThumbnail": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "publishedAt": {
+      "type": "datetime",
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "draft",
+        "published"
+      ]
+    },
+    "HTMLVideo": {
+      "type": "text",
+      "required": true
+    },
+    "PDF": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "editor": {
+      "via": "videos",
+      "model": "editor"
+    },
+    "graphics_designer": {
+      "via": "videos",
+      "model": "graphics-designer"
+    },
+    "writer": {
+      "via": "videos",
+      "model": "writer"
+    },
+    "vid_catagory": {
+      "via": "videos",
+      "model": "vid-catagories"
+    }
+  }
+}

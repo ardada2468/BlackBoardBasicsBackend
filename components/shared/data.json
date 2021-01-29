@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_data",
+  "info": {
+    "name": "Data",
+    "icon": "align-center"
+  },
+  "options": {},
+  "attributes": {
+    "greeting": {
+      "type": "richtext",
+      "required": true
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
