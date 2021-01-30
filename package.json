@@ -12,6 +12,8 @@
   },
   "devDependencies": {},
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^25.0.0",
+    "@ckeditor/ckeditor5-react": "^3.0.0",
     "knex": "<0.20.0",
     "pg": "^8.5.1",
     "sqlite3": "5.0.0",
@@ -21,8 +23,10 @@
     "strapi-plugin-content-manager": "3.4.5",
     "strapi-plugin-content-type-builder": "3.4.5",
     "strapi-plugin-email": "3.4.5",
+    "strapi-plugin-entity-relationship-chart": "^3.1.0",
     "strapi-plugin-upload": "3.4.5",
     "strapi-plugin-users-permissions": "3.4.5",
+    "strapi-provider-upload-google-cloud-storage": "^3.1.6",
     "strapi-utils": "3.4.5"
   },
   "author": {
@@ -32,7 +36,7 @@
     "uuid": "bb4ce96b-b0aa-4901-9650-51db92a85d10"
   },
   "engines": {
-    "node": "10.x.x",
+    "node": ">=10.0",
     "npm": ">=6.0.0"
   },
   "license": "MIT"
